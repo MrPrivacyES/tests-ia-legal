@@ -7,386 +7,514 @@
     {
       "slug": "qwen/qwen3.7-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.00072,
-      "tokens_salida": 3232
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.00072
+      }
     },
     {
       "slug": "thinkingmachines/inkling-small",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0066,
-      "tokens_salida": 3612
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0066
+      }
     },
     {
       "slug": "deepseek/deepseek-v4-flash-0731",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0018,
-      "tokens_salida": 4110
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0018
+      }
     },
     {
       "slug": "meta/muse-glimmer-30b",
       "fecha": "2026-10-11",
-      "coste_usd": 0.003,
-      "tokens_salida": 877
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.003
+      }
     },
     {
       "slug": "upstage/solar-pro4",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0013,
-      "tokens_salida": 1773
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0013
+      }
     },
     {
       "slug": "nvidia/nemotron-3.5-lightning",
       "fecha": "2026-10-11",
-      "coste_usd": 0.00051,
-      "tokens_salida": 1317
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.00051
+      }
     },
     {
       "slug": "x-ai/grok-4.6",
       "fecha": "2026-10-11",
-      "coste_usd": 0.017,
-      "tokens_salida": 1067
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.017
+      }
     },
     {
       "slug": "deepseek/deepseek-v4-pro-0813",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0086,
-      "tokens_salida": 3034
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0086
+      }
     },
     {
       "slug": "bytedance-seed/seed-2.0-code",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0071,
-      "tokens_salida": 1155
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0071
+      }
     },
     {
       "slug": "qwen/qwen3.8-2.4t-a95b",
       "fecha": "2026-10-11",
-      "coste_usd": 0.063,
-      "tokens_salida": 8223
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.063
+      }
     },
     {
       "slug": "bytedance-seed/seed-2-1-turbo",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0089,
-      "tokens_salida": 2116
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0089
+      }
     },
     {
       "slug": "google/gemini-3.7-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0096,
-      "tokens_salida": 1161
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0096
+      }
     },
     {
       "slug": "dots-studio/dots-3-note-preview:free",
       "fecha": "2026-10-11",
-      "coste_usd": 0,
-      "tokens_salida": 2703
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0
+      }
     },
     {
       "slug": "z-ai/glm-5.3",
       "fecha": "2026-10-11",
-      "coste_usd": 0.016,
-      "tokens_salida": 1934
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.016
+      }
     },
     {
       "slug": "deepseek/deepseek-v4-flash-vision-exp",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0035,
-      "tokens_salida": 3523
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0035
+      }
     },
     {
       "slug": "z-ai/glm-5.3-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.00059,
-      "tokens_salida": 4016
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.00059
+      }
     },
     {
       "slug": "qwen/qwen3.8-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0054,
-      "tokens_salida": 9312
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0054
+      }
     },
     {
       "slug": "inclusionai/ling-3.0-flash-fin",
       "fecha": "2026-10-11",
-      "coste_usd": 0.00052,
-      "tokens_salida": 1687
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.00052
+      }
     },
     {
       "slug": "tencent/hy4-preview",
       "fecha": "2026-10-11",
-      "coste_usd": 0.038,
-      "tokens_salida": 15029
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.038
+      }
     },
     {
       "slug": "ibm-granite/granite-4.2-8b",
       "fecha": "2026-10-11",
-      "coste_usd": 0.00081,
-      "tokens_salida": 1537
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.00081
+      }
     },
     {
       "slug": "anthropic/claude-fable-5.1",
       "fecha": "2026-10-11",
-      "coste_usd": 0.17,
-      "tokens_salida": 1838
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.17
+      }
     },
     {
       "slug": "google/gemini-3.8-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.01,
-      "tokens_salida": 1393
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.01
+      }
     },
     {
       "slug": "qwen/qwen3.8-max-0902",
       "fecha": "2026-10-11",
-      "coste_usd": 0.033,
-      "tokens_salida": 3213
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.033
+      }
     },
     {
       "slug": "inclusionai/ling-3.0-flash-sante",
       "fecha": "2026-10-11",
-      "coste_usd": 0.00045,
-      "tokens_salida": 1155
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.00045
+      }
     },
     {
       "slug": "openai/gpt-6-astra-pro",
       "fecha": "2026-10-11",
-      "coste_usd": 0.22,
-      "tokens_salida": 1539
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.22
+      }
     },
     {
       "slug": "openai/gpt-6-astra",
       "fecha": "2026-10-11",
-      "coste_usd": 0.097,
-      "tokens_salida": 687
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.097
+      }
     },
     {
       "slug": "nex-agi/nex-n2.5-mini",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0011,
-      "tokens_salida": 9644
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0011
+      }
     },
     {
       "slug": "inception/mercury-2.5",
       "fecha": "2026-10-11",
-      "coste_usd": 0.00062,
-      "tokens_salida": 2315
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.00062
+      }
     },
     {
       "slug": "deepseek/deepseek-v4.1-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0034,
-      "tokens_salida": 4286
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0034
+      }
     },
     {
       "slug": "unbiased/pareto",
       "fecha": "2026-10-11",
-      "coste_usd": 0.03,
-      "tokens_salida": 2087
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.03
+      }
     },
     {
       "slug": "z-ai/glm-5.3-flashx",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0048,
-      "tokens_salida": 2174
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0048
+      }
     },
     {
       "slug": "qwen/qwen3.8-omni-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0062,
-      "tokens_salida": 11004
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0062
+      }
     },
     {
       "slug": "x-ai/grok-4.7",
       "fecha": "2026-10-11",
-      "coste_usd": 0.029,
-      "tokens_salida": 2970
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.029
+      }
     },
     {
       "slug": "xiaomi/mimo-v2.6-pro",
       "fecha": "2026-10-11",
-      "coste_usd": 0.005,
-      "tokens_salida": 2222
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.005
+      }
     },
     {
       "slug": "xiaomi/mimo-v2.6-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0025,
-      "tokens_salida": 5221
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0025
+      }
     },
     {
       "slug": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "fecha": "2026-10-11",
-      "coste_usd": 0.049,
-      "tokens_salida": 1997
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.049
+      }
     },
     {
       "slug": "anthropic/claude-opus-5.5",
       "fecha": "2026-10-11",
-      "coste_usd": 0.069,
-      "tokens_salida": 1973
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.069
+      }
     },
     {
       "slug": "openai/gpt-6-sol",
       "fecha": "2026-10-11",
-      "coste_usd": 0.017,
-      "tokens_salida": 452
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.017
+      }
     },
     {
       "slug": "openai/gpt-6-sol-pro",
       "fecha": "2026-10-11",
-      "coste_usd": 0.039,
-      "tokens_salida": 1130
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.039
+      }
     },
     {
       "slug": "openai/gpt-6-luna",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0011,
-      "tokens_salida": 1035
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0011
+      }
     },
     {
       "slug": "openai/gpt-6-luna-pro",
       "fecha": "2026-10-11",
-      "coste_usd": 0.003,
-      "tokens_salida": 2610
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.003
+      }
     },
     {
       "slug": "cohere/command-a-plus",
       "fecha": "2026-10-11",
-      "coste_usd": 0.014,
-      "tokens_salida": 8405
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.014
+      }
     },
     {
       "slug": "aion-labs/aion-3.5",
       "fecha": "2026-10-11",
-      "coste_usd": 0.025,
-      "tokens_salida": 1475
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.025
+      }
     },
     {
       "slug": "aion-labs/aion-3.5-mini",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0066,
-      "tokens_salida": 1947
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0066
+      }
     },
     {
       "slug": "qwen/qwen3.8-max-prime",
       "fecha": "2026-10-11",
-      "coste_usd": 0.17,
-      "tokens_salida": 11875
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.17
+      }
     },
     {
       "slug": "z-ai/glm-5.3-prime",
       "fecha": "2026-10-11",
-      "coste_usd": 0.074,
-      "tokens_salida": 6621
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.074
+      }
     },
     {
       "slug": "fireworks/ember-1",
       "fecha": "2026-10-11",
-      "coste_usd": 0.038,
-      "tokens_salida": 1321
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.038
+      }
     },
     {
       "slug": "perceptron/perceptron-mk1.5",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0023,
-      "tokens_salida": 858
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0023
+      }
     },
     {
       "slug": "anthropic/claude-sonnet-5.5",
       "fecha": "2026-10-11",
-      "coste_usd": 0.031,
-      "tokens_salida": 1660
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.031
+      }
     },
     {
       "slug": "openai/gpt-6.1-sol",
       "fecha": "2026-10-11",
-      "coste_usd": 0.02,
-      "tokens_salida": 707
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.02
+      }
     },
     {
       "slug": "openai/gpt-6.1-sol-pro",
       "fecha": "2026-10-11",
-      "coste_usd": 0.044,
-      "tokens_salida": 1537
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.044
+      }
     },
     {
       "slug": "unbiased/pareto-26.10-preview",
       "fecha": "2026-10-11",
-      "coste_usd": 0.008,
-      "tokens_salida": 1112
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.008
+      }
     },
     {
       "slug": "apodex/apodex-1.1-mini:free",
       "fecha": "2026-10-11",
-      "coste_usd": 0,
-      "tokens_salida": 8281
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0
+      }
     },
     {
       "slug": "mistralai/mistral-large-4-0",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0079,
-      "tokens_salida": 2211
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0079
+      }
     },
     {
       "slug": "anthropic/claude-haiku-5.5",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0045,
-      "tokens_salida": 7597
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0045
+      }
     },
     {
       "slug": "stepfun/step-5-preview",
       "fecha": "2026-10-11",
-      "coste_usd": 0.012,
-      "tokens_salida": 2280
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.012
+      }
     },
     {
       "slug": "qwen/qwen3.8-27b",
       "fecha": "2026-10-11",
-      "coste_usd": 0.027,
-      "tokens_salida": 4773
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.027
+      }
     },
     {
       "slug": "inclusionai/ling-3.0-flash-vl",
       "fecha": "2026-10-11",
-      "coste_usd": 0.00025,
-      "tokens_salida": 1574
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.00025
+      }
     },
     {
       "slug": "upstage/solar-mini4",
       "fecha": "2026-10-11",
-      "coste_usd": 0.0023,
-      "tokens_salida": 9690
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.0023
+      }
     },
     {
       "slug": "meta/muse-spark-1.2",
       "fecha": "2026-10-11",
-      "coste_usd": 0.016,
-      "tokens_salida": 2366
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.016
+      }
     },
     {
       "slug": "meta/muse-spark-1.3",
       "fecha": "2026-10-11",
-      "coste_usd": 0.019,
-      "tokens_salida": 2932
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.019
+      }
     },
     {
       "slug": "google/gemini-3.1-pro-preview",
       "fecha": "2026-10-11",
-      "coste_usd": 0.035,
-      "tokens_salida": 1760
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.035
+      }
     },
     {
       "slug": "google/gemini-3.5-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.027,
-      "tokens_salida": 1822
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.027
+      }
     },
     {
       "slug": "google/gemini-3.6-flash",
       "fecha": "2026-10-11",
-      "coste_usd": 0.013,
-      "tokens_salida": 2066
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0.013
+      }
     }
   ],
   "controles": [
@@ -414,5 +542,6 @@
       "openrouter": "anomalia",
       "coincide": false
     }
-  ]
+  ],
+  "ejecuciones_objetivo": 3
 }
