@@ -853,6 +853,34 @@
         "2": 0.045,
         "3": 0.043
       }
+    },
+    {
+      "slug": "nex-agi/nex-n2.5-pro",
+      "fecha": "2026-10-11",
+      "ejecuciones": 3,
+      "costes": {
+        "1": 0.0011,
+        "2": 0.0012,
+        "3": 0.0017
+      }
+    },
+    {
+      "slug": "prism-ml/ternary-bonsai-2-27b",
+      "fecha": "2026-10-11",
+      "ejecuciones": 3,
+      "costes": {
+        "1": 0.0042,
+        "2": 0.0052,
+        "3": 0.0024
+      }
+    },
+    {
+      "slug": "inclusionai/ling-3.1-flash",
+      "fecha": "2026-10-11",
+      "ejecuciones": 1,
+      "costes": {
+        "1": 0
+      }
     }
   ],
   "controles": [

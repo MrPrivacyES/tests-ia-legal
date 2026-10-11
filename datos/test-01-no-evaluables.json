@@ -65,30 +65,6 @@
  },
  {
   "test": "t01",
-  "slug": "nex-agi/nex-n2.5-pro",
-  "model": "Nex AGI: Nex-N2.5-Pro",
-  "motivo": "No llegó a responder: más de cuatro minutos razonando sin emitir texto, en dos intentos",
-  "reintentar": true,
-  "fecha": "2026-10-11"
- },
- {
-  "test": "t01",
-  "slug": "prism-ml/ternary-bonsai-2-27b",
-  "model": "PrismML: Ternary Bonsai 2 27B",
-  "motivo": "No llegó a responder: más de cuatro minutos razonando sin emitir texto, en dos intentos",
-  "reintentar": true,
-  "fecha": "2026-10-11"
- },
- {
-  "test": "t01",
-  "slug": "inclusionai/ling-3.1-flash",
-  "model": "inclusionAI: Ling 3.1 Flash",
-  "motivo": "Límite de tasa del proveedor (Novita) en dos intentos",
-  "reintentar": true,
-  "fecha": "2026-10-11"
- },
- {
-  "test": "t01",
   "slug": "perplexity/sonar-deep-research",
   "model": "Perplexity Sonar Deep Research",
   "motivo": "Descartado: es un agente de investigación (búsquedas y lecturas encadenadas durante varios minutos, coste por consulta muy superior), no un modelo de conversación; no es aplicable a «Resume el contrato» sobre un documento adjunto.",
