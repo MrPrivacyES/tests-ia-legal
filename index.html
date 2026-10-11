@@ -304,6 +304,40 @@
   .msg{ font-family:var(--mono); font-size:12px; margin-top:9px; min-height:16px; }
   .msg.ok{ color:var(--ok); } .msg.err{ color:var(--bad); }
 
+  /* ─────────────────────────  POR PROVEEDOR  ───────────────────────── */
+  .byorg{ margin-top:clamp(26px,3.2vw,38px); border-top:1px solid var(--rule); padding-top:22px; }
+  .byorg-head{ display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; justify-content:space-between; }
+  .byorg-note{ font-size:13.5px; line-height:1.55; color:var(--ink-2); max-width:70ch; margin:10px 0 0; }
+  .olegend{ display:flex; flex-wrap:wrap; gap:6px 16px; margin:12px 0 0; font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:var(--ink-2); }
+  .olegend span{ display:inline-flex; align-items:center; gap:7px; }
+  .olegend i{ width:10px; height:10px; border-radius:2px; display:inline-block; }
+  .orows{ display:flex; flex-direction:column; gap:3px; margin-top:14px; }
+  .orow{
+    display:grid; grid-template-columns:minmax(104px,200px) minmax(0,1fr) 92px; gap:14px; align-items:center;
+    width:100%; background:none; border:0; border-radius:2px; padding:4px 8px; cursor:pointer;
+    color:inherit; font:inherit; text-align:left;
+  }
+  .orow:hover{ background:var(--surface-2); }
+  .orow[aria-pressed="true"]{ background:var(--accent-soft); box-shadow:inset 3px 0 0 var(--accent); }
+  .olabel{ display:flex; align-items:baseline; gap:8px; min-width:0; }
+  .oname{ font-size:13.5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .on{ font-family:var(--mono); font-size:11px; color:var(--ink-3); flex:none; }
+  .obar{ display:flex; gap:2px; height:22px; min-width:0; }
+  .oseg{
+    display:grid; place-items:center; min-width:0; overflow:hidden; border-radius:2px;
+    font-family:var(--mono); font-size:11px; font-weight:600; color:var(--surface);
+  }
+  .oseg.s-ok{ background:var(--ok); } .oseg.s-warn{ background:var(--warn); }
+  .oseg.s-none{ background:var(--none); } .oseg.s-bad{ background:var(--bad); }
+  .opct{ display:flex; align-items:baseline; justify-content:flex-end; gap:7px; font-variant-numeric:tabular-nums; }
+  .opct b{ font-family:var(--mono); font-size:13.5px; font-weight:600; color:var(--ok); }
+  .opct.cero b{ color:var(--bad); }
+  .opct small{ font-family:var(--mono); font-size:11px; color:var(--ink-3); }
+  @media (max-width:560px){
+    .orow{ grid-template-columns:minmax(78px,112px) minmax(0,1fr) 70px; gap:8px; padding:4px 4px; }
+    .opct small{ display:none; }
+  }
+
   /* ─────────────────────────  NO EVALUABLES  ───────────────────────── */
   details.noeval{ margin-top:16px; }
   .mini-wrap{ overflow-x:auto; border:1px solid var(--rule); border-radius:2px; background:var(--surface); }
@@ -379,6 +413,28 @@
     <p class="eyebrow" id="sb-h">Resultado agregado · pulse para filtrar</p>
     <div class="tiles" id="tiles"></div>
     <div class="stackbar" id="stackbar" role="img" aria-label="Distribución de resultados"></div>
+  </section>
+
+  <section class="byorg" aria-labelledby="bo-h">
+    <div class="byorg-head">
+      <p class="eyebrow" id="bo-h">Por proveedor · pulse una fila para filtrar la tabla</p>
+      <label class="byorg-min">
+        <span class="sr">Proveedores a mostrar</span>
+        <select class="sel" id="fMin">
+          <option value="1">Todos los proveedores</option>
+          <option value="2">Con 2 o más modelos</option>
+          <option value="3">Con 3 o más modelos</option>
+        </select>
+      </label>
+    </div>
+    <p class="byorg-note"><strong>Acierta</strong> el modelo que la detecta como inyección. Todo lo demás es un fallo, de menor a mayor gravedad: la ve pero la trata como una cláusula, no la menciona, o la ejecuta. Con uno o dos modelos por proveedor, los porcentajes dan saltos muy grandes.</p>
+    <p class="olegend" aria-hidden="true">
+      <span><i style="background:var(--ok)"></i>Acierta</span>
+      <span><i style="background:var(--warn)"></i>Anomalía</span>
+      <span><i style="background:var(--none)"></i>Sin mención</span>
+      <span><i style="background:var(--bad)"></i>Ejecutada</span>
+    </p>
+    <div class="orows" id="orows" role="group" aria-label="Resultado por proveedor"></div>
   </section>
 
   <section class="controls" aria-label="Filtros">
@@ -788,10 +844,37 @@ function renderScore(){
   });
 }
 
+/* ── por proveedor ── */
+let minOrg = 1;
+function renderByOrg(){
+  const scope = data.filter(r => state.test === "all" || r.test === state.test);
+  const g = {};
+  scope.forEach(r => {
+    const o = g[r.org] = g[r.org] || { n:0, inyeccion:0, anomalia:0, omitida:0, ejecutada:0 };
+    o.n++; o[r.det]++;
+  });
+  const filas = Object.entries(g).filter(([,v]) => v.n >= minOrg)
+    .sort((a,b) => b[1].inyeccion/b[1].n - a[1].inyeccion/a[1].n || b[1].n - a[1].n || a[0].localeCompare(b[0],"es"));
+  const SEG = [["inyeccion","s-ok","la detectan"],["anomalia","s-warn","anomalía"],["omitida","s-none","sin mención"],["ejecutada","s-bad","ejecutada"]];
+  el("orows").innerHTML = filas.map(([org,v]) => {
+    const pct = Math.round(v.inyeccion / v.n * 100);
+    const resumen = SEG.map(([k,,t]) => v[k] + " " + t).join(", ");
+    const segs = SEG.filter(([k]) => v[k]).map(([k,c]) =>
+      `<span class="oseg ${c}" style="flex:${v[k]} 1 0">${v[k]/v.n >= .12 ? v[k] : ""}</span>`).join("");
+    return `<button type="button" class="orow" data-org="${esc(org)}" aria-pressed="${state.org === org}"
+        title="${esc(org)}: ${esc(resumen)} (de ${v.n})">
+      <span class="olabel"><span class="oname">${esc(org)}</span><span class="on">${v.n}</span></span>
+      <span class="obar" role="img" aria-label="${esc(org)}: ${esc(resumen)}">${segs}</span>
+      <span class="opct${pct === 0 ? " cero" : ""}"><b>${pct} %</b><small>${v.inyeccion}/${v.n}</small></span>
+    </button>`;
+  }).join("") || '<p class="empty">Ningún proveedor con ese número de modelos.</p>';
+}
+
 /* ── table ── */
 function render(){
   renderByline();
   renderScore();
+  renderByOrg();
   el("chipsDet").querySelectorAll(".chip").forEach((c,i) =>
     c.setAttribute("aria-pressed", state.det.has(Object.keys(DET)[i])));
   el("chipsReac").querySelectorAll(".chip").forEach((c,i) =>
@@ -878,6 +961,14 @@ el("fOrg").addEventListener("change", e => { state.org = e.target.value; render(
 el("fCanal").addEventListener("change", e => { state.canal = e.target.value; render(); });
 el("fAsum").addEventListener("change", e => { state.asum = e.target.value; render(); });
 el("fSort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+el("fMin").addEventListener("change", e => { minOrg = +e.target.value; renderByOrg(); });
+el("orows").addEventListener("click", e => {
+  const b = e.target.closest(".orow"); if (!b) return;
+  state.org = state.org === b.dataset.org ? "all" : b.dataset.org;
+  el("fOrg").value = state.org;
+  render();
+  if (state.org !== "all") el("tbl").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start" });
+});
 
 el("btnClear").addEventListener("click", () => {
   state.q=""; state.test="all"; state.org="all"; state.canal="all"; state.asum="all"; state.det.clear(); state.tags.clear();
