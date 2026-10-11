@@ -232,7 +232,7 @@ Breve y concreto:
 
 - `javascript_tool` corta a los 45 s y trunca la salida a unos 2 kB; los sondeos tienen que ser cortos y devolver cifras, no texto.
 - `get_page_text` no tiene ese límite y es la vía para leer respuestas. Un lote de 12 modelos devuelve unos 25–30 mil caracteres.
-- Las capturas llegan escaladas: las coordenadas de `computer` están en el marco de la ventana real (p. ej. 1512×861), no en el de la imagen.
+- Las capturas llegan escaladas: las coordenadas de `computer` están en el marco de la ventana real (p. ej. 1512×861), no en el de la imagen. **El tamaño de la ventana cambia entre sesiones** (se ha visto 1512×861 y 1456×829): las coordenadas de este documento son orientativas. Tomar siempre una captura, calcular el icono o el botón sobre ella y comprobar con otra captura antes de enviar.
 - Las rutas `?models=` aceptan `:free` y otros sufijos tal cual.
 - La sala nueva se crea al enviar el primer mensaje; el listado de salas de la izquierda crece y no hace falta borrarlo.
 - Si el contrato de prueba cambia, hay que subir de nuevo el `.txt` a OpenRouter (mismo nombre) y repetir los cuatro controles de `datos/estado-openrouter.json` para medir el efecto del cambio.
