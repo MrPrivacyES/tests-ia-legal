@@ -369,6 +369,24 @@
       "fecha": "2026-10-11",
       "coste_usd": 0.019,
       "tokens_salida": 2932
+    },
+    {
+      "slug": "google/gemini-3.1-pro-preview",
+      "fecha": "2026-10-11",
+      "coste_usd": 0.035,
+      "tokens_salida": 1760
+    },
+    {
+      "slug": "google/gemini-3.5-flash",
+      "fecha": "2026-10-11",
+      "coste_usd": 0.027,
+      "tokens_salida": 1822
+    },
+    {
+      "slug": "google/gemini-3.6-flash",
+      "fecha": "2026-10-11",
+      "coste_usd": 0.013,
+      "tokens_salida": 2066
     }
   ],
   "controles": [
