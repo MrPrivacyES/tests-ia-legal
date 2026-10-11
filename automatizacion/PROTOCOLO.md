@@ -215,7 +215,7 @@ Descripción del repositorio (cifras actualizadas):
 gh repo edit MrPrivacyES/tests-ia-legal --description "Tests de The Legal Letters sobre usos legales de IA. Test 01: qué modelos detectan una inyección de prompts oculta en un contrato (N modelos, M proveedores)."
 ```
 
-GitHub Pages se reconstruye solo. Comprobar: `curl -s https://mrprivacyes.github.io/tests-ia-legal/ | grep -c "<nombre de un modelo nuevo>"` debe dar al menos 1 (puede tardar un minuto).
+GitHub Pages se reconstruye solo (dominio propio tests.thelegaletters.com; el archivo CNAME del repositorio debe conservarse). Comprobar: `curl -sL https://tests.thelegaletters.com/ | grep -c "<nombre de un modelo nuevo>"` debe dar al menos 1 (puede tardar un minuto).
 
 Republicar el artefacto en la misma URL: herramienta `Artifact` con `file_path` = `/Users/jorgemorellramos/Desktop/Claude CoWork/Tests IA Legal/index.html` y `url` = `https://claude.ai/code/artifact/d0797526-5f0a-45b9-b0a9-acddb98803e0`. Si la herramienta no está disponible, se menciona en el informe. No hay que pasar `capabilities`: la declaración `downloads` (necesaria para que el botón «Descargar CSV» funcione en el visor) se conserva de una publicación a la siguiente.
 

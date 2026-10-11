@@ -2,7 +2,7 @@
 
 Serie de pruebas sobre usos jurídicos de la inteligencia artificial, con los resultados publicados en una tabla interactiva con filtros, búsqueda y exportación a CSV. Se actualiza cada lunes con los modelos nuevos.
 
-**→ [mrprivacyes.github.io/tests-ia-legal](https://mrprivacyes.github.io/tests-ia-legal/)**
+**→ [tests.thelegaletters.com](https://tests.thelegaletters.com/)**
 
 ---
 
