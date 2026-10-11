@@ -893,7 +893,7 @@ el("btnExpand").addEventListener("click", e => {
   e.target.textContent = openAll ? "Plegar todo" : "Desplegar todo";
 });
 
-el("btnCsv").addEventListener("click", () => {
+el("btnCsv").addEventListener("click", async () => {
   const cols = ["Test","Modelo","Proveedor","Canal","Fecha","Identificador","Detección","Matiz detección","Cómo respondió",
                 "Etiquetas","¿Asumió la instrucción?","Matiz","Cita literal","Otros hallazgos"];
   const q = v => `"${String(v==null?"":v).replace(/"/g,'""')}"`;
@@ -905,10 +905,16 @@ el("btnCsv").addEventListener("click", () => {
     (ASSUMED[r.assumed]||{}).label||r.assumed, r.assumedNote||"",
     r.quote||"", (r.extras||[]).join(" | ")
   ].map(q).join(",")));
-  const blob = new Blob(["﻿"+lines.join("\r\n")], { type:"text/csv;charset=utf-8" });
+  const csv = "\ufeff" + lines.join("\r\n");
+  const nombre = "test-inyeccion-prompts-contratos.csv";
+  // En el visor de artefactos la descarga pasa por la capacidad «downloads»; en GitHub Pages, por el enlace normal.
+  try {
+    const dl = (window.claude && window.claude.use) ? await window.claude.use("downloads") : null;
+    if (dl) { await dl.save({ filename: nombre, data: csv }); return; }
+  } catch (err) { if (err && err.code === "declined") return; }
   const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "test-inyeccion-prompts-contratos.csv";
+  a.href = URL.createObjectURL(new Blob([csv], { type:"text/csv;charset=utf-8" }));
+  a.download = nombre;
   a.click(); URL.revokeObjectURL(a.href);
 });
 
