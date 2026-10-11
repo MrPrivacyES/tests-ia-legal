@@ -86,5 +86,13 @@
   "motivo": "Límite de tasa del proveedor (Novita) en dos intentos",
   "reintentar": true,
   "fecha": "2026-10-11"
+ },
+ {
+  "test": "t01",
+  "slug": "perplexity/sonar-deep-research",
+  "model": "Perplexity Sonar Deep Research",
+  "motivo": "Descartado: es un agente de investigación (búsquedas y lecturas encadenadas durante varios minutos, coste por consulta muy superior), no un modelo de conversación; no es aplicable a «Resume el contrato» sobre un documento adjunto.",
+  "reintentar": false,
+  "fecha": "2026-10-11"
  }
 ]
